@@ -1,0 +1,83 @@
+<aura:component
+  controller="SendLog"
+  implements="flexipage:availableForAllPageTypes"
+  access="global"
+>
+  <aura:attribute name="sendLogEmail" type="String" default="" />
+  <aura:attribute name="sendLogResults" type="String[]" />
+  <div class="component">
+    <div class="container">
+      <div class="main">
+        <div class="row">
+          <div class="col-s3 col table-container">
+            <div class="card-container">
+              <div class="card">
+                <div class="card-title">
+                  <h6 class="card-subdescription">SEARCH EMAIL</h6>
+                  <h3 class="card-description">Send Log</h3>
+                </div>
+                <div class="card-subcontainer">
+                  <div class="table-search">
+                    <lightning:input
+                      type="text"
+                      name="email-search"
+                      placeholder="Enter An Email Address To Search Sent Emails"
+                      value="{!v.sendLogEmail}"
+                    />
+                    <div class="search-icon" onclick="{!c.sendLogSubmit}">
+                      <lightning:icon
+                        iconName="utility:search"
+                        alternativeText="Search"
+                        size="small"
+                    /></div>
+                  </div>
+                  <aura:if isTrue="{!not(empty(v.sendLogResults))}">
+                    <div class="table-responsive">
+                      <table class="table">
+                        <thead>
+                          <tr>
+                            <th>Email Name</th> <th>Send Date</th
+                            ><th>Email Send</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <aura:iteration items="{!v.sendLogResults}" var="row">
+                            <tr>
+                              <td class="email-name">{!row.emailname_}</td>
+                              <td>{!row.send_date}</td>
+                              <td
+                                ><a
+                                  class="btn preview"
+                                  href="{!row.view_email_url}"
+                                  target="_blank"
+                                  >Preview</a
+                                ></td
+                              >
+                            </tr>
+                          </aura:iteration>
+                        </tbody>
+                      </table>
+                    </div>
+                    <aura:set attribute="else">
+                      <div class="empty-sl"
+                        ><div class="empty-header"
+                          ><h3>No results listed.</h3></div
+                        ><div class="empty-text"
+                          ><p
+                            >Enter an email address in the search bar in order
+                            to view the most recent email sends for a
+                            recipient.</p
+                          ></div
+                        ></div
+                      >
+                    </aura:set>
+                  </aura:if>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</aura:component>

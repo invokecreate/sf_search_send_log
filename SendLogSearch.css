@@ -1,0 +1,143 @@
+/* PRIMARY CONTAINER STYLES */
+.THIS .col-s12 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  display: flex;
+  align-items: stretch !important;
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+}
+.THIS .container {
+    width: 100%;
+    background-color: #f8f8f8;
+    border-radius: 5px;
+    padding: 1rem 0;
+}
+.THIS .main {
+  width: 92%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 0.75em;
+  color: #575a65;
+}
+.THIS .row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+  margin-bottom: 2rem;
+}
+/* CARD STYLES */
+.THIS .card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  transition: 0.3s;
+  background-color: #ffffff;
+  border-radius: 5px;
+  width: 100%;
+}
+.THIS .card:hover {
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+.THIS .card-container {
+  width: 100%;
+}
+.THIS .card-description {
+  font-size: 1.85em;
+}
+.THIS .card-footer {
+  padding: 15px 15px 10px 20px;
+  display: flex;
+  align-items: center;
+}
+.THIS .table-container .card-container {
+  padding: 0 15px;
+}
+.THIS .card-subcontainer {
+  padding: 2px 16px;
+}
+.THIS .card-title {
+  padding: 25px 20px;
+}
+/* TABLE STYLES */
+.THIS .table {
+  width: 100%;
+  margin-bottom: 1rem;
+  color: #575a65;
+}
+.THIS .table td,
+.THIS .table th {
+  padding: 0.75rem;
+  vertical-align: middle;
+  color: #575a65;
+}
+.THIS td, .THIS th {
+  padding-left: 5px !important;
+}
+.THIS .table thead th {
+  vertical-align: bottom;
+}
+.THIS .table-bordered {
+  border: 1px solid #dee2e6;
+}
+.THIS .table .email-name {
+  color: #222222;
+}
+.THIS .table-striped tbody tr:nth-of-type(odd) {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+.THIS .table-hover tbody tr:hover {
+  color: #575a65;
+  background-color: rgba(0, 0, 0, 0.075);
+}
+.THIS .table .btn {
+  border: none;
+  color: white;
+  padding: 10px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  max-width: 100%;
+  border-radius: 5px;
+}
+.THIS .table .preview {
+  background-color: #7ad1dc !important;
+}
+.THIS tr:not(:last-child) {
+    border-bottom: 2px solid #e9ecef;
+}
+/* SEARCH AND ICON STYLES */
+.THIS button.slds-button.slds-button_icon.border-0.slds-button_icon-border {
+  border: none;
+}
+.THIS .empty-sl {
+    padding: 1rem 2rem 2rem .2rem;
+}
+.THIS .empty-header h3 {
+    font-size: 1.2rem;
+}
+.THIS .empty-text {
+  padding-top: 1rem;
+}
+.THIS .search-icon {
+  display: inline-flex;
+  cursor: pointer;
+}
+.THIS .slds-form-element__label:empty {
+    display: none;
+}
+.THIS .table-search lightning-input {
+    display: inline-block;
+    width: 85%;
+}
+.THIS .table-search lightning-primitive-icon {
+    display: inline-block;
+}
+.THIS .table-search {
+  padding-bottom: 0.75rem;
+}
+.THIS .table-search lightning-primitive-icon {
+    padding-left: 10px;
+}
