@@ -1,3 +1,3 @@
 <aura:application >
-	<c:MarketingCloudDashboard />
+	<c:SendLogSearch />
 </aura:application>
